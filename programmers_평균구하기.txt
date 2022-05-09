@@ -1,0 +1,15 @@
+//프로그래머스 - 평균 구하기
+class Solution {
+    public double solution(int[] arr) {
+        double sum = 0;
+        double answer = 0;
+        int count = arr.length;
+
+        for(int i = 0; i < arr.length; i++){
+            sum += arr[i];
+        }
+        
+        answer = sum / count;
+        return answer;
+    }
+}

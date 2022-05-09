@@ -1,0 +1,17 @@
+//프로그래머스 - 하샤드 수
+
+class Solution {
+    public boolean solution(int x) {
+        String xString = String.valueOf(x); //18
+        int sum = 0;
+        boolean answer = true;
+        for(int i = 0; i < xString.length(); i++){
+             int z = Integer.parseInt(xString.substring(i,i+1));
+             sum += z;
+         }
+         if(x % sum != 0){
+             answer = false;
+         }
+        return answer;
+    }
+}
