@@ -1,0 +1,28 @@
+//프로그래머스 - 제일 작은 수 제거하기
+import java.util.*;
+
+class Solution {
+    public int[] solution(int[] arr) {
+        
+        if(arr.length == 1){
+            int[] answer = {-1};
+            return answer;
+        } else {
+            int min = arr[0]; 
+            int count = 0;
+            
+            int[] answer = new int[arr.length-1];
+            for(int i=0; i<arr.length; i++){
+                min = Math.min(min, arr[i]);
+            }
+            
+            for(int i = 0; i < arr.length; i++){
+                if(arr[i] != min){
+                    answer[count] = arr[i];
+                    count++;
+                }
+            }
+            return answer;
+        }
+    }
+}
