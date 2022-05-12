@@ -22,4 +22,4 @@ class Solution {
         answer = Long.parseLong(mArraysValue);
         return answer;
     }
-}
+} 
