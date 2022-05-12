@@ -1,0 +1,25 @@
+//프로그래머스- 정수 내림차순으로 배치하기
+
+import java.util.*;
+
+class Solution {
+    public long solution(long n) {
+        String nn = String.valueOf(n);
+        Integer[] mArrays = new Integer[nn.length()];
+        String mArraysValue = "";
+        long answer = 0;
+        
+        for(int i=0; i<mArrays.length; i++){
+            mArrays[i] = Integer.parseInt(nn.substring(i,i+1));
+        }
+        //mArrays 내림차순 정렬
+        Arrays.sort(mArrays, Collections.reverseOrder());
+        
+        for(int i=0; i<mArrays.length; i++){
+            mArraysValue += mArrays[i];
+        }
+        System.out.println(mArraysValue);
+        answer = Long.parseLong(mArraysValue);
+        return answer;
+    }
+}

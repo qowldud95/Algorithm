@@ -1,0 +1,16 @@
+//프로그래머스-자릿수 더하기
+
+import java.util.*;
+
+public class Solution {
+    public int solution(int n) {
+        String nn = String.valueOf(n); //123
+        int answer = 0;
+        for(int i=0; i<nn.length(); i++){
+            String x = nn.substring(i,i+1);
+            answer += Integer.parseInt(x);
+        }
+        
+        return answer;
+    }
+}
