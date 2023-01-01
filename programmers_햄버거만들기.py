@@ -7,4 +7,4 @@ def solution(ingredient):
                 answer+=1
                 for k in range(4) :
                     temp.pop()
-    return answer
+    return answer 
